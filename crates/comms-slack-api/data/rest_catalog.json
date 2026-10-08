@@ -1,0 +1,1654 @@
+[
+  {
+    "name": "scim.v1.config.info",
+    "canonical_key": "scim.v1.config.info",
+    "summary": "GET /scim/v1/ServiceProviderConfigs",
+    "path": "/scim/v1/ServiceProviderConfigs",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v1.schemas.users",
+    "canonical_key": "scim.v1.schemas.users",
+    "summary": "GET /scim/v1/Schemas/Users",
+    "path": "/scim/v1/Schemas/Users",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v1.users.list",
+    "canonical_key": "scim.v1.users.list",
+    "summary": "GET /scim/v1/Users",
+    "path": "/scim/v1/Users",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "startIndex": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "filter": {
+          "type": "string"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v1.users.get",
+    "canonical_key": "scim.v1.users.get",
+    "summary": "GET /scim/v1/Users/{id}",
+    "path": "/scim/v1/Users/{id}",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v1.users.create",
+    "canonical_key": "scim.v1.users.create",
+    "summary": "POST /scim/v1/Users",
+    "path": "/scim/v1/Users",
+    "http_method": "POST",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "body": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "body"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/json"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v1.users.update",
+    "canonical_key": "scim.v1.users.update",
+    "summary": "PATCH /scim/v1/Users/{id}",
+    "path": "/scim/v1/Users/{id}",
+    "http_method": "PATCH",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "id",
+        "body"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/json"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v1.users.replace",
+    "canonical_key": "scim.v1.users.replace",
+    "summary": "PUT /scim/v1/Users/{id}",
+    "path": "/scim/v1/Users/{id}",
+    "http_method": "PUT",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "id",
+        "body"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/json"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v1.users.delete",
+    "canonical_key": "scim.v1.users.delete",
+    "summary": "DELETE /scim/v1/Users/{id}",
+    "path": "/scim/v1/Users/{id}",
+    "http_method": "DELETE",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/json"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v1.schemas.groups",
+    "canonical_key": "scim.v1.schemas.groups",
+    "summary": "GET /scim/v1/Schemas/Groups",
+    "path": "/scim/v1/Schemas/Groups",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v1.groups.list",
+    "canonical_key": "scim.v1.groups.list",
+    "summary": "GET /scim/v1/Groups",
+    "path": "/scim/v1/Groups",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "startIndex": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "filter": {
+          "type": "string"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v1.groups.get",
+    "canonical_key": "scim.v1.groups.get",
+    "summary": "GET /scim/v1/Groups/{id}",
+    "path": "/scim/v1/Groups/{id}",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v1.groups.create",
+    "canonical_key": "scim.v1.groups.create",
+    "summary": "POST /scim/v1/Groups",
+    "path": "/scim/v1/Groups",
+    "http_method": "POST",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "body": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "body"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/json"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v1.groups.update",
+    "canonical_key": "scim.v1.groups.update",
+    "summary": "PATCH /scim/v1/Groups/{id}",
+    "path": "/scim/v1/Groups/{id}",
+    "http_method": "PATCH",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "id",
+        "body"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/json"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v1.groups.replace",
+    "canonical_key": "scim.v1.groups.replace",
+    "summary": "PUT /scim/v1/Groups/{id}",
+    "path": "/scim/v1/Groups/{id}",
+    "http_method": "PUT",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "id",
+        "body"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/json"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v1.groups.delete",
+    "canonical_key": "scim.v1.groups.delete",
+    "summary": "DELETE /scim/v1/Groups/{id}",
+    "path": "/scim/v1/Groups/{id}",
+    "http_method": "DELETE",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/json"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v2.config.info",
+    "canonical_key": "scim.v2.config.info",
+    "summary": "GET /scim/v2/ServiceProviderConfig",
+    "path": "/scim/v2/ServiceProviderConfig",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v2.resource_types.list",
+    "canonical_key": "scim.v2.resource_types.list",
+    "summary": "GET /scim/v2/ResourceTypes",
+    "path": "/scim/v2/ResourceTypes",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v2.schemas.list",
+    "canonical_key": "scim.v2.schemas.list",
+    "summary": "GET /scim/v2/Schemas",
+    "path": "/scim/v2/Schemas",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v2.schemas.users",
+    "canonical_key": "scim.v2.schemas.users",
+    "summary": "GET /scim/v2/Schemas/Users",
+    "path": "/scim/v2/Schemas/Users",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v2.users.list",
+    "canonical_key": "scim.v2.users.list",
+    "summary": "GET /scim/v2/Users",
+    "path": "/scim/v2/Users",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "startIndex": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "filter": {
+          "type": "string"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v2.users.get",
+    "canonical_key": "scim.v2.users.get",
+    "summary": "GET /scim/v2/Users/{id}",
+    "path": "/scim/v2/Users/{id}",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v2.users.create",
+    "canonical_key": "scim.v2.users.create",
+    "summary": "POST /scim/v2/Users",
+    "path": "/scim/v2/Users",
+    "http_method": "POST",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "body": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "body"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/json"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v2.users.update",
+    "canonical_key": "scim.v2.users.update",
+    "summary": "PATCH /scim/v2/Users/{id}",
+    "path": "/scim/v2/Users/{id}",
+    "http_method": "PATCH",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "id",
+        "body"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/json"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v2.users.replace",
+    "canonical_key": "scim.v2.users.replace",
+    "summary": "PUT /scim/v2/Users/{id}",
+    "path": "/scim/v2/Users/{id}",
+    "http_method": "PUT",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "id",
+        "body"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/json"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v2.users.delete",
+    "canonical_key": "scim.v2.users.delete",
+    "summary": "DELETE /scim/v2/Users/{id}",
+    "path": "/scim/v2/Users/{id}",
+    "http_method": "DELETE",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/json"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v2.schemas.groups",
+    "canonical_key": "scim.v2.schemas.groups",
+    "summary": "GET /scim/v2/Schemas/Groups",
+    "path": "/scim/v2/Schemas/Groups",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v2.groups.list",
+    "canonical_key": "scim.v2.groups.list",
+    "summary": "GET /scim/v2/Groups",
+    "path": "/scim/v2/Groups",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "startIndex": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "filter": {
+          "type": "string"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v2.groups.get",
+    "canonical_key": "scim.v2.groups.get",
+    "summary": "GET /scim/v2/Groups/{id}",
+    "path": "/scim/v2/Groups/{id}",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v2.groups.create",
+    "canonical_key": "scim.v2.groups.create",
+    "summary": "POST /scim/v2/Groups",
+    "path": "/scim/v2/Groups",
+    "http_method": "POST",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "body": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "body"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/json"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v2.groups.update",
+    "canonical_key": "scim.v2.groups.update",
+    "summary": "PATCH /scim/v2/Groups/{id}",
+    "path": "/scim/v2/Groups/{id}",
+    "http_method": "PATCH",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "id",
+        "body"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/json"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v2.groups.replace",
+    "canonical_key": "scim.v2.groups.replace",
+    "summary": "PUT /scim/v2/Groups/{id}",
+    "path": "/scim/v2/Groups/{id}",
+    "http_method": "PUT",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "id",
+        "body"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/json"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "scim.v2.groups.delete",
+    "canonical_key": "scim.v2.groups.delete",
+    "summary": "DELETE /scim/v2/Groups/{id}",
+    "path": "/scim/v2/Groups/{id}",
+    "http_method": "DELETE",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/scim-api/",
+    "content_types": [
+      "application/json"
+    ],
+    "scopes": [
+      "admin"
+    ],
+    "token_types": [
+      "scim"
+    ],
+    "rate_limit": "SCIM endpoint rate limit plus Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/scim-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "audit.actions.list",
+    "canonical_key": "audit.actions.list",
+    "summary": "GET /audit/v1/actions",
+    "path": "/audit/v1/actions",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/audit-logs-api/methods-actions-reference/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [],
+    "token_types": [
+      "none"
+    ],
+    "rate_limit": "Tier 3, organization-wide",
+    "source_refs": [
+      "https://docs.slack.dev/reference/audit-logs-api/methods-actions-reference/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "audit.schemas.list",
+    "canonical_key": "audit.schemas.list",
+    "summary": "GET /audit/v1/schemas",
+    "path": "/audit/v1/schemas",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/audit-logs-api/methods-actions-reference/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [],
+    "token_types": [
+      "none"
+    ],
+    "rate_limit": "Tier 3, organization-wide",
+    "source_refs": [
+      "https://docs.slack.dev/reference/audit-logs-api/methods-actions-reference/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "audit.logs.list",
+    "canonical_key": "audit.logs.list",
+    "summary": "GET /audit/v1/logs",
+    "path": "/audit/v1/logs",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "action": {
+          "type": "string"
+        },
+        "actor": {
+          "type": "string"
+        },
+        "entity": {
+          "type": "string"
+        },
+        "oldest": {
+          "type": "integer"
+        },
+        "latest": {
+          "type": "integer"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9999
+        },
+        "cursor": {
+          "type": "string"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/audit-logs-api/methods-actions-reference/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "auditlogs:read"
+    ],
+    "token_types": [
+      "audit"
+    ],
+    "rate_limit": "Tier 3, organization-wide",
+    "source_refs": [
+      "https://docs.slack.dev/reference/audit-logs-api/methods-actions-reference/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "admin.legalHold.policies.activate",
+    "canonical_key": "admin.legalHold.policies.activate",
+    "summary": "Activate a released Legal Hold policy.",
+    "path": "/admin.legalHold.policies.activate",
+    "http_method": "POST",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "policy_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "policy_id"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/legal-holds-api-reference/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin.legal_holds:write"
+    ],
+    "token_types": [
+      "admin"
+    ],
+    "rate_limit": "Refer to Slack Enterprise API limits and Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/legal-holds-api-reference/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "admin.legalHold.policies.create",
+    "canonical_key": "admin.legalHold.policies.create",
+    "summary": "Create an active Legal Hold policy.",
+    "path": "/admin.legalHold.policies.create",
+    "http_method": "POST",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "policy_start_date": {
+          "type": "integer"
+        },
+        "policy_end_date": {
+          "type": "integer"
+        },
+        "restrictions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "ONLY_DMS",
+              "NO_RESTRICTION"
+            ]
+          }
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/legal-holds-api-reference/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin.legal_holds:write"
+    ],
+    "token_types": [
+      "admin"
+    ],
+    "rate_limit": "Refer to Slack Enterprise API limits and Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/legal-holds-api-reference/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "admin.legalHold.policies.info",
+    "canonical_key": "admin.legalHold.policies.info",
+    "summary": "Read the details of a Legal Hold policy.",
+    "path": "/admin.legalHold.policies.info",
+    "http_method": "POST",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "policy_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "policy_id"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/legal-holds-api-reference/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin.legal_holds:read"
+    ],
+    "token_types": [
+      "admin"
+    ],
+    "rate_limit": "Refer to Slack Enterprise API limits and Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/legal-holds-api-reference/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "admin.legalHold.policies.list",
+    "canonical_key": "admin.legalHold.policies.list",
+    "summary": "List Legal Hold policies with cursor pagination.",
+    "path": "/admin.legalHold.policies.list",
+    "http_method": "POST",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "cursor": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "ACTIVE",
+            "RELEASED"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/legal-holds-api-reference/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin.legal_holds:read"
+    ],
+    "token_types": [
+      "admin"
+    ],
+    "rate_limit": "Refer to Slack Enterprise API limits and Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/legal-holds-api-reference/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "admin.legalHold.policies.release",
+    "canonical_key": "admin.legalHold.policies.release",
+    "summary": "Release an active Legal Hold policy.",
+    "path": "/admin.legalHold.policies.release",
+    "http_method": "POST",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "policy_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "policy_id"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/legal-holds-api-reference/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin.legal_holds:write"
+    ],
+    "token_types": [
+      "admin"
+    ],
+    "rate_limit": "Refer to Slack Enterprise API limits and Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/legal-holds-api-reference/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "admin.legalHold.policies.set",
+    "canonical_key": "admin.legalHold.policies.set",
+    "summary": "Update the name or description of an active Legal Hold policy.",
+    "path": "/admin.legalHold.policies.set",
+    "http_method": "POST",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "policy_id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "policy_id"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/legal-holds-api-reference/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin.legal_holds:write"
+    ],
+    "token_types": [
+      "admin"
+    ],
+    "rate_limit": "Refer to Slack Enterprise API limits and Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/legal-holds-api-reference/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "admin.legalHold.entities.add",
+    "canonical_key": "admin.legalHold.entities.add",
+    "summary": "Add custodians to an active Legal Hold policy.",
+    "path": "/admin.legalHold.entities.add",
+    "http_method": "POST",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "policy_id": {
+          "type": "string"
+        },
+        "entities": {
+          "type": "array",
+          "maxItems": 100,
+          "items": {
+            "type": "object",
+            "properties": {
+              "entity_type": {
+                "type": "string",
+                "enum": [
+                  "USER"
+                ]
+              },
+              "entity_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "entity_type",
+              "entity_id"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "policy_id",
+        "entities"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/legal-holds-api-reference/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin.legal_holds:write"
+    ],
+    "token_types": [
+      "admin"
+    ],
+    "rate_limit": "Refer to Slack Enterprise API limits and Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/legal-holds-api-reference/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "admin.legalHold.entities.list",
+    "canonical_key": "admin.legalHold.entities.list",
+    "summary": "List custodians assigned to a Legal Hold policy.",
+    "path": "/admin.legalHold.entities.list",
+    "http_method": "POST",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "policy_id": {
+          "type": "string"
+        },
+        "cursor": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "include_deleted": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "policy_id"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/legal-holds-api-reference/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin.legal_holds:read"
+    ],
+    "token_types": [
+      "admin"
+    ],
+    "rate_limit": "Refer to Slack Enterprise API limits and Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/legal-holds-api-reference/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "admin.legalHold.entities.remove",
+    "canonical_key": "admin.legalHold.entities.remove",
+    "summary": "Remove custodians from an active Legal Hold policy.",
+    "path": "/admin.legalHold.entities.remove",
+    "http_method": "POST",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "policy_id": {
+          "type": "string"
+        },
+        "ids": {
+          "type": "array",
+          "maxItems": 100,
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "policy_id",
+        "ids"
+      ],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/legal-holds-api-reference/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [
+      "admin.legal_holds:write"
+    ],
+    "token_types": [
+      "admin"
+    ],
+    "rate_limit": "Refer to Slack Enterprise API limits and Retry-After",
+    "source_refs": [
+      "https://docs.slack.dev/reference/legal-holds-api-reference/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "status.current",
+    "canonical_key": "status.current",
+    "summary": "Read active Slack service incidents.",
+    "path": "/api/v2.0.0/current",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/slack-status-api/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [],
+    "token_types": [
+      "public"
+    ],
+    "rate_limit": "Poll current no more frequently than once per minute",
+    "source_refs": [
+      "https://docs.slack.dev/reference/slack-status-api/"
+    ],
+    "coverage": "docs-only"
+  },
+  {
+    "name": "status.history",
+    "canonical_key": "status.history",
+    "summary": "Read past Slack service incidents.",
+    "path": "/api/v2.0.0/history",
+    "http_method": "GET",
+    "input_schema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "docs_url": "https://docs.slack.dev/reference/slack-status-api/",
+    "content_types": [
+      "application/x-www-form-urlencoded"
+    ],
+    "scopes": [],
+    "token_types": [
+      "public"
+    ],
+    "rate_limit": "Poll current no more frequently than once per minute",
+    "source_refs": [
+      "https://docs.slack.dev/reference/slack-status-api/"
+    ],
+    "coverage": "docs-only"
+  }
+]

@@ -1,0 +1,25 @@
+[package]
+name = "comms-codemode"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[features]
+default = []
+local = ["dep:incurs-codemode-local"]
+mcp = ["dep:incurs-codemode-mcp"]
+remote = ["dep:reqwest"]
+native = ["local", "mcp", "remote"]
+
+[dependencies]
+async-trait.workspace = true
+incurs.workspace = true
+incurs-codemode.workspace = true
+incurs-codemode-local = { workspace = true, optional = true }
+incurs-codemode-mcp = { workspace = true, optional = true }
+serde.workspace = true
+serde_json.workspace = true
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"], optional = true }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }

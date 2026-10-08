@@ -1,0 +1,57 @@
+# Slack Developer Docs
+
+> The official documentation for building on the Slack platform: apps, agents, workflows, and integrations. Covers the Slack CLI, Bolt frameworks (JavaScript, Python, Java), SDKs, the Web and Events APIs, Block Kit, authentication, and Slack Marketplace distribution.
+
+Every page on docs.slack.dev is available as markdown by appending `.md` to its URL (for example, https://docs.slack.dev/quickstart.md). A full index of markdown pages is at https://docs.slack.dev/llms-sitemap.md. When you need a framework or SDK, specify the language, because implementation details differ between Bolt for JavaScript, Python, and Java.
+
+## Getting started
+
+- [Quickstart](https://docs.slack.dev/quickstart.md): Build and run your first Slack app.
+- [Slack platform overview](https://docs.slack.dev/concepts/overview.md): Core concepts and how the pieces of the platform fit together.
+- [Tools overview](https://docs.slack.dev/tools.md): Choose between the Slack CLI, Bolt frameworks, and SDKs.
+- [Slack CLI](https://docs.slack.dev/tools/slack-cli.md): The recommended way to scaffold, run, install, and manage an app's lifecycle.
+
+## Building apps and agents
+
+- [AI apps and agents](https://docs.slack.dev/ai.md): Build agentic experiences with streaming, thinking steps, and assistant surfaces.
+- [Messaging](https://docs.slack.dev/messaging.md): Send, format, and manage messages.
+- [Block Kit](https://docs.slack.dev/block-kit.md): Compose rich, interactive message and surface layouts.
+- [Surfaces](https://docs.slack.dev/surfaces.md): App Home, modals, and other places your app appears.
+- [Interactivity](https://docs.slack.dev/interactivity/handling-user-interaction.md): Handle buttons, menus, shortcuts, and other user interactions.
+- [Workflows](https://docs.slack.dev/workflows.md): Automate repeatable sequences with Workflow Builder and custom steps.
+
+## APIs and reference
+
+- [Slack APIs](https://docs.slack.dev/apis.md): The Web API and Events API.
+- [Reference](https://docs.slack.dev/reference.md): API methods, events, scopes, objects, and Block Kit reference.
+- [Authentication](https://docs.slack.dev/authentication.md): OAuth, tokens, scopes, and verifying requests from Slack.
+
+## Frameworks and SDKs
+
+- [Bolt for JavaScript](https://docs.slack.dev/tools/bolt-js.md): Slack's JavaScript framework for building apps.
+- [Bolt for Python](https://docs.slack.dev/tools/bolt-python.md): Slack's Python framework for building apps.
+- [Bolt for Java](https://docs.slack.dev/tools/java-slack-sdk/guides/getting-started-with-bolt): Slack's Java framework for building apps.
+- [Java Slack SDK](https://docs.slack.dev/tools/java-slack-sdk.md): Bolt for Java and the Java Slack SDK.
+- [Node Slack SDK](https://docs.slack.dev/tools/node-slack-sdk.md): Language-level building blocks for JavaScript.
+- [Python Slack SDK](https://docs.slack.dev/tools/python-slack-sdk.md): Language-level building blocks for Python.
+
+## AI-assisted development
+
+- [AI-assisted development](https://docs.slack.dev/ai/build-with-ai.md): How to give AI coding tools better context about the Slack platform.
+- [Slack MCP server](https://docs.slack.dev/ai/slack-mcp-server.md): Give an AI tool direct access to your Slack workspace data.
+
+## Distribution
+
+- [App management](https://docs.slack.dev/app-management.md): Configure, distribute, and host your app.
+- [Slack Marketplace](https://docs.slack.dev/slack-marketplace.md): List an app in the Slack Marketplace, including review requirements.
+- [Security](https://docs.slack.dev/concepts/security.md): Security and privacy best practices.
+
+## Optional
+
+- [llms-full.txt](https://docs.slack.dev/llms-full.txt): The entire documentation site concatenated into one file.
+- [llms-full-platform.txt](https://docs.slack.dev/llms-full-platform.txt): Platform docs, reference, and language-agnostic tools; pair with a language file below.
+- [llms-full-js.txt](https://docs.slack.dev/llms-full-js.txt): Bolt for JavaScript and the Node Slack SDK.
+- [llms-full-python.txt](https://docs.slack.dev/llms-full-python.txt): Bolt for Python and the Python Slack SDK.
+- [llms-full-java.txt](https://docs.slack.dev/llms-full-java.txt): Bolt for Java and the Java Slack SDK.
+- [llms-full-deno.txt](https://docs.slack.dev/llms-full-deno.txt): Deno Slack SDK.
+- [Markdown page index](https://docs.slack.dev/llms-sitemap.md): A full list of every documentation page available as markdown.

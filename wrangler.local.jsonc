@@ -1,0 +1,77 @@
+{
+  "name": "comms-local",
+  "main": "crates/comms-worker/build/worker/shim.mjs",
+  "account_id": "00000000000000000000000000000000",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "build": {
+    "command": "worker-build --release . -- --locked",
+    "watch_dir": "crates/comms-worker/src",
+    "cwd": "crates/comms-worker"
+  },
+  "vars": {
+    "COMMS_PUBLIC_URL": "https://comms.example.com",
+    "OWNER_EMAIL": "owner@example.com",
+    "ACCESS_TEAM_DOMAIN": "fixture.cloudflareaccess.com",
+    "ACCESS_AUD": "comms-local-tests",
+    "ACCESS_JWKS_URL": "http://127.0.0.1:9412/certs",
+    "SLACK_CLIENT_ID": "000000000000.000000000000",
+    "SLACK_TEAM_ID": "TEXAMPLE",
+    "OWNER_SLACK_ID": "UEXAMPLE",
+    "SLACK_DEFAULT_CHANNEL": "",
+    "SLACK_FIXTURE_MODE": "1",
+    "SLACK_API_ORIGIN": "http://127.0.0.1:9412",
+    "SLACK_SIGNING_SECRET": "com-slack-fixture-secret",
+    "SLACK_CLIENT_SECRET": "fixture-client-secret",
+    "SLACK_BOT_TOKEN": "fixture-slack-bot-token",
+    "SLACK_USER_TOKEN": "fixture-slack-owner-token",
+    "SLACK_ADMIN_TOKEN": "fixture-slack-admin-token",
+    "SLACK_SCIM_TOKEN": "fixture-slack-scim-token",
+    "SLACK_AUDIT_TOKEN": "fixture-slack-audit-token",
+    "LINEAR_SEAL_KEY": "EREREREREREREREREREREREREREREREREREREREREREQ",
+    "SLACK_SEAL_KEY": "WlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlo"
+  },
+  "d1_databases": [
+    {
+      "binding": "DATA",
+      "database_name": "comms-data",
+      "database_id": "00000000-0000-0000-0000-000000000001"
+    },
+    {
+      "binding": "CONTROL",
+      "database_name": "comms-control",
+      "database_id": "00000000-0000-0000-0000-000000000002",
+      "migrations_dir": "migrations/control"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MEDIA",
+      "bucket_name": "comms-media"
+    }
+  ],
+  "observability": {
+    "enabled": false
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "CODEMODE",
+        "class_name": "CodeModeObject"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1-codemode",
+      "new_sqlite_classes": [
+        "CodeModeObject"
+      ]
+    }
+  ],
+  "worker_loaders": [
+    {
+      "binding": "CODEMODE_WORKER_LOADER"
+    }
+  ]
+}

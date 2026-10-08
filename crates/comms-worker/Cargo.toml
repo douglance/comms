@@ -1,0 +1,38 @@
+[package]
+name = "comms-worker"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+comms-core = { path = "../comms-core" }
+comms-linear = { path = "../comms-linear" }
+url = "2"
+incurs.workspace = true
+comms-identity.workspace = true
+comms-interactions.workspace = true
+comms-slack-api.workspace = true
+comms-slack-runtime.workspace = true
+comms-codemode.workspace = true
+async-trait.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2 = "0.10"
+base64 = "0.22"
+rsa = { version = "0.9", default-features = false, features = ["std", "sha2"] }
+getrandom = { version = "0.2", features = ["js"] }
+http-body-util = "0.1"
+worker = { version = "0.8.5", features = ["http", "axum", "d1"] }
+axum = { version = "0.8", default-features = false, features = ["json"] }
+tower-service = "0.3"
+js-sys = "0.3"
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+web-sys = { version = "0.3", features = ["Response", "ReadableStream"] }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+incurs-codemode.workspace = true
+incurs-codemode-cloudflare = "=0.9.0"

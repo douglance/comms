@@ -1,0 +1,17 @@
+/target/
+/.wrangler/
+/node_modules/
+/.dev.vars
+/.env*
+**/build/
+__pycache__/
+
+/.slack/
+/.local/
+*.pem
+*.key
+credentials*.json
+*.pyc
+
+# Full upstream prose may contain credential-shaped vendor examples.
+/docs/slack/raw/llms-full.txt

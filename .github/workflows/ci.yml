@@ -1,0 +1,68 @@
+name: CI and release
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publication guard
+        run: |
+          python3 scripts/check_publication.py --self-test
+          python3 scripts/check_publication.py
+      - name: Install Rust
+        run: rustup update stable && rustup default stable && rustup component add rustfmt clippy
+      - name: Format
+        run: cargo fmt --all --check
+      - name: Tests
+        run: cargo test --workspace --locked
+      - name: Linear lifecycle tests
+        run: python3 tests/linear_lifecycle.py
+      - name: Wasm check
+        run: |
+          rustup target add wasm32-unknown-unknown
+          cargo clippy -p comms-worker --target wasm32-unknown-unknown --locked -- -D warnings
+      - name: Vault tests
+        run: |
+          python3 -m pip install cryptography
+          python3 -m unittest discover -s tests -p test_comms_vault.py
+      - name: Clippy
+        run: cargo clippy --workspace --all-targets --all-features --locked -- -D warnings
+      - name: Build CLI
+        run: cargo build --release -p comms-cli --locked
+      - name: Smoke CLI
+        run: target/release/comms --help
+      - name: Package Linux CLI
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          tar -czf comms-linux-x86_64.tar.gz -C target/release comms
+          sha256sum comms-linux-x86_64.tar.gz > SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        if: startsWith(github.ref, 'refs/tags/v')
+        with:
+          name: linux-cli
+          path: |
+            comms-linux-x86_64.tar.gz
+            SHA256SUMS
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: linux-cli
+      - name: Publish verified release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view "$GITHUB_REF_NAME" || gh release create "$GITHUB_REF_NAME" --verify-tag --title "Comms $GITHUB_REF_NAME" --notes "Public agent Slack CLI. Configure COMMS_URL and provision enrollment credentials separately. Includes Linux x86_64 binary and SHA-256 checksum."
+          gh release upload "$GITHUB_REF_NAME" comms-linux-x86_64.tar.gz SHA256SUMS --clobber

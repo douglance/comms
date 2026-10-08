@@ -1,0 +1,33 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+exclude = ["vendor/incurs"]
+
+[profile.dev]
+debug = 0
+incremental = false
+
+[profile.test]
+debug = 0
+incremental = false
+
+[workspace.package]
+version = "0.1.1"
+edition = "2024"
+license = "MIT"
+
+[workspace.dependencies]
+incurs = { version = "=0.11.0", default-features = false, features = ["cli", "toon", "http", "openapi"] }
+async-trait = "0.1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+schemars = "1"
+
+comms-identity = { path = "crates/comms-identity" }
+comms-slack-api = { path = "crates/comms-slack-api" }
+comms-slack-runtime = { path = "crates/comms-slack-runtime" }
+comms-interactions = { path = "crates/comms-interactions" }
+comms-codemode = { path = "crates/comms-codemode" }
+incurs-codemode = "=0.9.0"
+incurs-codemode-local = "=0.9.0"
+incurs-codemode-mcp = "=0.9.0"

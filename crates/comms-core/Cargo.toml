@@ -1,0 +1,16 @@
+[package]
+name = "comms-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+incurs.workspace = true
+comms-slack-api.workspace = true
+async-trait.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+schemars.workspace = true
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt"] }

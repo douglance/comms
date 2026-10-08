@@ -1,0 +1,6 @@
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Official Slack documentation examples only; never application source or configuration"
+paths = ['''^docs/slack/raw/llms-full\.txt$''', '''^crates/comms-slack-api/data/docs_index\.json$''']

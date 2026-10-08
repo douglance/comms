@@ -1,0 +1,25 @@
+[package]
+name = "comms-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "comms"
+path = "src/main.rs"
+
+[dependencies]
+async-trait.workspace = true
+comms-core = { path = "../comms-core" }
+incurs.workspace = true
+comms-identity.workspace = true
+comms-codemode = { workspace = true, features = ["remote", "mcp"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "stream"] }
+schemars.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tokio = { version = "1", features = ["fs", "io-util", "macros", "rt-multi-thread", "time"] }
+url = "2"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "time"] }
