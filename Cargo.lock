@@ -309,7 +309,7 @@ dependencies = [
 
 [[package]]
 name = "comms-cli"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "async-trait",
  "comms-codemode",
@@ -326,7 +326,7 @@ dependencies = [
 
 [[package]]
 name = "comms-codemode"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "async-trait",
  "incurs",
@@ -341,7 +341,7 @@ dependencies = [
 
 [[package]]
 name = "comms-core"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "async-trait",
  "comms-slack-api",
@@ -354,7 +354,7 @@ dependencies = [
 
 [[package]]
 name = "comms-identity"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "schemars",
  "serde",
@@ -364,7 +364,7 @@ dependencies = [
 
 [[package]]
 name = "comms-interactions"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "async-trait",
  "form_urlencoded",
@@ -377,7 +377,7 @@ dependencies = [
 
 [[package]]
 name = "comms-linear"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "aes-gcm",
  "base64 0.22.1",
@@ -390,7 +390,7 @@ dependencies = [
 
 [[package]]
 name = "comms-slack-api"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "async-trait",
  "incurs",
@@ -401,7 +401,7 @@ dependencies = [
 
 [[package]]
 name = "comms-slack-runtime"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "async-trait",
  "comms-slack-api",
@@ -412,7 +412,7 @@ dependencies = [
 
 [[package]]
 name = "comms-worker"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "async-trait",
  "axum",

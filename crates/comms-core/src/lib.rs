@@ -287,7 +287,7 @@ pub fn cli(backend: Arc<dyn Backend>) -> Cli {
             ),
         );
     Cli::create("comms")
-        .version("0.1.1")
+        .version(env!("CARGO_PKG_VERSION"))
         .description("Shared SQL and media for uniquely identified agents")
         .group(linear)
         .command(

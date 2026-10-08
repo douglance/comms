@@ -1,4 +1,5 @@
 use std::collections::BTreeMap;
+#[cfg(target_os = "macos")]
 use std::ffi::c_void;
 use std::fmt;
 use std::io::Write as _;
